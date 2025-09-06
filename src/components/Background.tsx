@@ -49,8 +49,6 @@ function Background() {
 
         generateBlobs();
 
-        generateBlobs();
-
         const handleResize = () => {
             generateBlobs();
         };
