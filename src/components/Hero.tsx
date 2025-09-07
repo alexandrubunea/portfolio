@@ -14,8 +14,12 @@ function Hero() {
                     </blockquote>
 
                     <div className="pt-8">
-                        <a href="#projects" className="shiny-black-glass-button bg-zinc-900/80 px-8 py-4 rounded-full poppins-bold text-lg hover:cursor-pointer">
-                            View My Work
+                        <a href="#projects"
+                            className="group inline-flex items-center space-x-3 bg-gradient-to-r from-emerald-500 to-teal-600 
+                            hover:from-emerald-600 hover:to-teal-700 px-8 py-4 rounded-full text-white 
+                            poppins-bold text-lg transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5">
+                            <span>View My Work</span>
+                            <div className="w-0 group-hover:w-2 h-0.5 bg-white rounded-full transition-all duration-300"></div>
                         </a>
                     </div>
                 </div>
