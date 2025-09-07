@@ -6,17 +6,17 @@ import AboutMe from './components/AboutMe';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import { Helmet } from 'react-helmet-async';
+import { preload } from 'react-dom';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    preload('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap', { as: 'style' });
+    preload('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,400&display=swap', { as: 'style' });
+  }, []);
+
   return (
     <>
-      <Helmet>
-        <title>Alexandru Bunea - Portfolio</title>
-        <meta name="description" content="Software developer portfolio showcasing full-stack web development, embedded systems, and cybersecurity projects. Experienced in React, Express, Laravel, PHP, ESP32, and Raspberry Pi." />
-        <meta name="keywords" content="software developer, full-stack development, React, Express, Laravel, PHP, embedded systems, ESP32, Raspberry Pi, IoT, cybersecurity, API security, authentication, encryption, scalable applications, TailwindCSS, web development portfolio" />
-      </Helmet>
-
       <div className="min-h-screen flex flex-col">
         <Background />
 
