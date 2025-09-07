@@ -39,7 +39,7 @@ function Navigation() {
                         </li>
                     </ul>
 
-                    <ul className="flex flex-row gap-x-3 items-center">
+                    <ul className="flex flex-row gap-x-3 items-center poppins-light">
                         <li>
                             <a className="text-md p-3 hover:bg-zinc-900/80 hover:text-white rounded-sm transition-colors duration-300" href="#start">
                                 Start
@@ -108,7 +108,7 @@ function Navigation() {
                     {/* Mobile Menu */}
                     <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                         }`}>
-                        <ul className="flex flex-col py-4 border-t border-zinc-200/30">
+                        <ul className="flex flex-col py-4 border-t border-zinc-200/30 poppins-light">
                             <li>
                                 <a
                                     className="block text-md p-3 hover:bg-zinc-900/80 hover:text-white rounded-sm transition-colors duration-300"
