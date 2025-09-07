@@ -1,6 +1,6 @@
 function Hero() {
     return (
-        <section id="start" className="flex justify-center px-6 sm:px-20 xl:px-0 overflow-hidden">
+        <section className="flex justify-center px-6 sm:px-20 xl:px-0 w-full">
             <div className="glass-card bg-zinc-50/60 mt-10 w-full max-w-7xl h-[80vh] p-8 sm:p-12 lg:p-20 rounded-2xl">
                 <div className="h-full flex flex-col justify-center space-y-8 items-center md:items-start">
                     <h1 className="text-5xl jetbrains-mono-bold text-zinc-800">Alexandru Bunea</h1>

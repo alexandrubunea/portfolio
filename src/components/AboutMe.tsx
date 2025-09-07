@@ -27,7 +27,7 @@ const TECHNICAL_SKILLS = [
 
 function AboutMe() {
     return (
-        <section id="aboutme" className="flex justify-center px-6 sm:px-20 xl:px-0">
+        <section className="flex justify-center px-6 sm:px-20 xl:px-0">
             <div className="glass-card outline-zinc-800 outline-1 bg-zinc-50/90 rounded-2xl w-full max-w-7xl min-h-[80vh] mx-auto shadow-2xl overflow-hidden">
                 <div className="flex justify-between items-center bg-gradient-to-r from-slate-100 to-slate-50 rounded-t-3xl h-14 border-b border-slate-200/70 px-4 sm:px-6">
                     <div className="flex items-center space-x-3">
@@ -47,7 +47,7 @@ function AboutMe() {
 
                     <div className="flex-1 flex justify-center">
                         <div className="bg-white/50 backdrop-blur-sm rounded-lg px-4 py-1.5 border border-slate-200/50">
-                            <h5 className="font-mono font-bold text-sm text-slate-700">about_me.txt</h5>
+                            <h5 className="poppins-regular font-bold text-sm text-slate-700">about_me.txt</h5>
                         </div>
                     </div>
 

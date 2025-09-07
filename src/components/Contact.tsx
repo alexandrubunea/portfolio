@@ -92,7 +92,7 @@ function Contact() {
     const isFormValid = formData.name.trim() && formData.email.trim() && formData.message.trim();
 
     return (
-        <section id="contact" className="flex justify-center px-6 sm:px-20 xl:px-0">
+        <section className="flex justify-center px-6 sm:px-20 xl:px-0">
             <div className="glass-card bg-zinc-50/80 w-full max-w-7xl min-h-[80vh] p-8 sm:p-12 lg:p-20 rounded-2xl">
                 <div className="h-full space-y-8">
                     <div className="text-center space-y-4">
@@ -242,20 +242,22 @@ function Contact() {
                         <div className="space-y-6">
                             <h2 className="jetbrains-mono-bold text-xl text-zinc-800">Get In Touch</h2>
 
-                            <div className="space-y-6">
+                            <div className="grid grid-rows-3 gap-6 w-full">
                                 {/* Email */}
                                 <div className="group p-6 bg-white/60 rounded-xl border border-zinc-200/50 
-                                              hover:bg-white/80 hover:shadow-md transition-all duration-200">
-                                    <div className="flex items-center space-x-4">
+                                     hover:bg-white/80 hover:shadow-md transition-all duration-200 
+                                        flex flex-col h-full min-h-[120px]">
+                                    <div className="flex items-center space-x-4 flex-1">
                                         <div className="w-12 h-12 bg-gradient-to-br from-emerald-400 to-emerald-600 
-                                                      rounded-lg flex items-center justify-center">
+                                            rounded-lg flex items-center justify-center flex-shrink-0">
                                             <EnvelopeIcon size={20} weight="fill" className="text-white" />
                                         </div>
-                                        <div>
-                                            <h3 className="poppins-bold text-zinc-800">Email</h3>
+                                        <div className="flex-1 min-w-0">
+                                            <h3 className="poppins-bold text-zinc-800 mb-1">Email</h3>
                                             <a
                                                 href="mailto:alexandrubunea03.contact@gmail.com"
-                                                className="poppins-regular text-emerald-600 hover:text-emerald-700 transition-colors">
+                                                className="poppins-regular text-emerald-600 hover:text-emerald-700 
+                                                transition-colors break-all text-sm">
                                                 alexandrubunea03.contact@gmail.com
                                             </a>
                                         </div>
@@ -264,19 +266,21 @@ function Contact() {
 
                                 {/* LinkedIn */}
                                 <div className="group p-6 bg-white/60 rounded-xl border border-zinc-200/50 
-                                              hover:bg-white/80 hover:shadow-md transition-all duration-200">
-                                    <div className="flex items-center space-x-4">
+                                     hover:bg-white/80 hover:shadow-md transition-all duration-200 
+                                        flex flex-col h-full min-h-[120px]">
+                                    <div className="flex items-center space-x-4 flex-1">
                                         <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 
-                                                      rounded-lg flex items-center justify-center">
+                                            rounded-lg flex items-center justify-center flex-shrink-0">
                                             <LinkedinLogoIcon size={20} weight="fill" className="text-white" />
                                         </div>
-                                        <div>
-                                            <h3 className="poppins-bold text-zinc-800">LinkedIn</h3>
+                                        <div className="flex-1 min-w-0">
+                                            <h3 className="poppins-bold text-zinc-800 mb-1">LinkedIn</h3>
                                             <a
                                                 href="https://www.linkedin.com/in/alexandruwbunea/"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="poppins-regular text-blue-600 hover:text-blue-700 transition-colors">
+                                                className="poppins-regular text-blue-600 hover:text-blue-700 
+                                                transition-colors text-sm">
                                                 /in/alexandruwbunea
                                             </a>
                                         </div>
@@ -285,19 +289,21 @@ function Contact() {
 
                                 {/* GitHub */}
                                 <div className="group p-6 bg-white/60 rounded-xl border border-zinc-200/50 
-                                              hover:bg-white/80 hover:shadow-md transition-all duration-200">
-                                    <div className="flex items-center space-x-4">
+                                hover:bg-white/80 hover:shadow-md transition-all duration-200 
+                                    flex flex-col h-full min-h-[120px]">
+                                    <div className="flex items-center space-x-4 flex-1">
                                         <div className="w-12 h-12 bg-gradient-to-br from-gray-700 to-gray-800 
-                                                      rounded-lg flex items-center justify-center">
+                                            rounded-lg flex items-center justify-center flex-shrink-0">
                                             <GithubLogoIcon size={20} weight="fill" className="text-white" />
                                         </div>
-                                        <div>
-                                            <h3 className="poppins-bold text-zinc-800">GitHub</h3>
+                                        <div className="flex-1 min-w-0">
+                                            <h3 className="poppins-bold text-zinc-800 mb-1">GitHub</h3>
                                             <a
                                                 href="https://github.com/alexandrubunea"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="poppins-regular text-gray-600 hover:text-gray-700 transition-colors">
+                                                className="poppins-regular text-gray-600 hover:text-gray-700 
+                             transition-colors text-sm">
                                                 /alexandrubunea
                                             </a>
                                         </div>

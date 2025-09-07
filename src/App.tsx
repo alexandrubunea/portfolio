@@ -8,20 +8,35 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
-
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Background />
+      
       <Navigation />
-      <div className="flex flex-col gap-y-16 mb-5">
-        <Hero />
-        <AboutMe />
-        <Projects />
-        <Contact />
-      </div>
+      
+      <main className="flex-1 max-w-7xl mx-auto">
+        <section id="start" className="min-h-screen flex justify-center items-center">
+          <Hero />
+        </section>
+        
+        <div className="space-y-24 py-16">
+          <section id="aboutme">
+            <AboutMe />
+          </section>
+          
+          <section id="projects">
+            <Projects />
+          </section>
+          
+          <section id="contact">
+            <Contact />
+          </section>
+        </div>
+      </main>
+      
       <Footer />
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;

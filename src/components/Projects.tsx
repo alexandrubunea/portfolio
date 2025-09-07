@@ -68,7 +68,7 @@ function Projects() {
 
     if (loading) {
         return (
-            <section id="projects" className="flex justify-center px-6 sm:px-20 xl:px-0">
+            <section className="flex justify-center px-6 sm:px-20 xl:px-0">
                 <div className="glass-card bg-zinc-50/80 w-full max-w-7xl min-h-[80vh] p-8 sm:p-12 lg:p-20 rounded-2xl">
                     <div className="h-full flex items-center justify-center">
                         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-500"></div>

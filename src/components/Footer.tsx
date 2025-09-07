@@ -139,7 +139,7 @@ function Footer() {
                                     size={16}
                                     weight="bold"
                                     className="text-emerald-400 group-hover:text-emerald-300 
-                                             transition-all duration-200 group-hover:-translate-y-0.5"/>
+                                             transition-all duration-200 group-hover:-translate-y-0.5 hover:cursor-pointer"/>
                             </button>
                         </div>
                     </div>
