@@ -1,8 +1,9 @@
 import { GithubLogoIcon, LinkedinLogoIcon, List, X } from "@phosphor-icons/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Navigation() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -12,9 +13,39 @@ function Navigation() {
         setIsMobileMenuOpen(false);
     };
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollY = window.scrollY;
+            setIsScrolled(scrollY > 0);
+        };
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+
+        // Cleanup function to remove event listener
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    // Dynamic classes based on scroll state
+    const navClasses = isScrolled
+        ? "glass-card bg-zinc-900/95 backdrop-blur-sm border border-zinc-700/30 shadow-lg text-zinc-50"
+        : "glass-card bg-zinc-50/60 backdrop-blur-sm border border-zinc-200/20 shadow-lg text-zinc-900";
+
+    const linkHoverClasses = isScrolled
+        ? "hover:bg-zinc-50/20 hover:text-zinc-50"
+        : "hover:bg-zinc-900/80 hover:text-white";
+
+    const iconHoverClasses = isScrolled
+        ? "hover:bg-zinc-50/20 hover:text-zinc-50"
+        : "hover:bg-zinc-900/80 hover:text-white";
+
+    const mobileMenuBorderClasses = isScrolled
+        ? "border-zinc-700/30"
+        : "border-zinc-200/30";
+
     return (
-        <div className="flex justify-center px-6 sm:px-20 xl:px-0 mt-5 sticky">
-            <nav className="glass-card bg-zinc-50/60 backdrop-blur-sm border border-zinc-200/20 shadow-lg h-auto w-full px-5 max-w-7xl rounded-lg">
+        <div className="flex justify-center px-6 sm:px-20 xl:px-0 sticky top-0 z-50">
+            <nav className={`${navClasses} h-auto w-full px-5 max-w-7xl top-4 rounded-lg transition-all duration-300`}>
 
                 {/* Desktop Navigation */}
                 <div className="hidden md:flex justify-between items-center h-16">
@@ -22,7 +53,7 @@ function Navigation() {
                         <li>
                             <a href="https://www.github.com/alexandrubunea/" target="_blank" aria-label="GitHub Profile">
                                 <GithubLogoIcon
-                                    className="p-2 hover:bg-zinc-900/80 hover:text-white rounded-sm transition-colors duration-300"
+                                    className={`p-2 ${iconHoverClasses} rounded-sm transition-colors duration-300`}
                                     weight="fill"
                                     size={40}
                                 />
@@ -31,7 +62,7 @@ function Navigation() {
                         <li>
                             <a href="https://www.linkedin.com/in/alexandruwbunea/" target="_blank" aria-label="LinkedIn Profile">
                                 <LinkedinLogoIcon
-                                    className="p-2 hover:bg-zinc-900/80 hover:text-white rounded-sm transition-colors duration-300"
+                                    className={`p-2 ${iconHoverClasses} rounded-sm transition-colors duration-300`}
                                     weight="fill"
                                     size={40}
                                 />
@@ -41,27 +72,27 @@ function Navigation() {
 
                     <ul className="flex flex-row gap-x-3 items-center poppins-light">
                         <li>
-                            <a className="text-md p-3 hover:bg-zinc-900/80 hover:text-white rounded-sm transition-colors duration-300" href="#start">
+                            <a className={`text-md p-3 ${linkHoverClasses} rounded-sm transition-colors duration-300`} href="#start">
                                 Start
                             </a>
                         </li>
                         <li>
-                            <a className="text-md p-3 hover:bg-zinc-900/80 hover:text-white rounded-sm transition-colors duration-300" href="#aboutme">
+                            <a className={`text-md p-3 ${linkHoverClasses} rounded-sm transition-colors duration-300`} href="#aboutme">
                                 About me
                             </a>
                         </li>
                         <li>
-                            <a className="text-md p-3 hover:bg-zinc-900/80 hover:text-white rounded-sm transition-colors duration-300" href="#skills">
+                            <a className={`text-md p-3 ${linkHoverClasses} rounded-sm transition-colors duration-300`} href="#skills">
                                 Skills
                             </a>
                         </li>
                         <li>
-                            <a className="text-md p-3 hover:bg-zinc-900/80 hover:text-white rounded-sm transition-colors duration-300" href="#projects">
+                            <a className={`text-md p-3 ${linkHoverClasses} rounded-sm transition-colors duration-300`} href="#projects">
                                 Projects
                             </a>
                         </li>
                         <li>
-                            <a className="text-md p-3 hover:bg-zinc-900/80 hover:text-white rounded-sm transition-colors duration-300" href="#contact">
+                            <a className={`text-md p-3 ${linkHoverClasses} rounded-sm transition-colors duration-300`} href="#contact">
                                 Contact
                             </a>
                         </li>
@@ -70,22 +101,23 @@ function Navigation() {
 
                 {/* Mobile Navigation */}
                 <div className="md:hidden">
+
                     {/* Mobile Header */}
                     <div className="flex justify-between items-center h-16">
                         <ul className="flex flex-row gap-x-3 items-center text-2xl">
                             <li>
-                                <a href="#" aria-label="GitHub Profile">
+                                <a href="https://www.github.com/alexandrubunea/" target="_blank" aria-label="GitHub Profile">
                                     <GithubLogoIcon
-                                        className="p-2 hover:bg-zinc-900/80 hover:text-white rounded-sm transition-colors duration-300"
+                                        className={`p-2 ${iconHoverClasses} rounded-sm transition-colors duration-300`}
                                         weight="fill"
                                         size={32}
                                     />
                                 </a>
                             </li>
                             <li>
-                                <a href="#" aria-label="LinkedIn Profile">
+                                <a href="https://www.linkedin.com/in/alexandruwbunea/" target="_blank" aria-label="LinkedIn Profile">
                                     <LinkedinLogoIcon
-                                        className="p-2 hover:bg-zinc-900/80 hover:text-white rounded-sm transition-colors duration-300"
+                                        className={`p-2 ${iconHoverClasses} rounded-sm transition-colors duration-300`}
                                         weight="fill"
                                         size={32}
                                     />
@@ -95,7 +127,7 @@ function Navigation() {
 
                         <button
                             onClick={toggleMobileMenu}
-                            className="p-2 hover:bg-zinc-900/80 hover:text-white rounded-sm transition-colors duration-300"
+                            className={`p-2 ${iconHoverClasses} rounded-sm transition-colors duration-300`}
                             aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}>
                             {isMobileMenuOpen ? (
                                 <X size={24} weight="bold" />
@@ -108,10 +140,10 @@ function Navigation() {
                     {/* Mobile Menu */}
                     <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                         }`}>
-                        <ul className="flex flex-col py-4 border-t border-zinc-200/30 poppins-light">
+                        <ul className={`flex flex-col py-4 border-t ${mobileMenuBorderClasses} poppins-light`}>
                             <li>
                                 <a
-                                    className="block text-md p-3 hover:bg-zinc-900/80 hover:text-white rounded-sm transition-colors duration-300"
+                                    className={`block text-md p-3 ${linkHoverClasses} rounded-sm transition-colors duration-300`}
                                     href="#start"
                                     onClick={closeMobileMenu}>
                                     Start
@@ -119,7 +151,7 @@ function Navigation() {
                             </li>
                             <li>
                                 <a
-                                    className="block text-md p-3 hover:bg-zinc-900/80 hover:text-white rounded-sm transition-colors duration-300"
+                                    className={`block text-md p-3 ${linkHoverClasses} rounded-sm transition-colors duration-300`}
                                     href="#aboutme"
                                     onClick={closeMobileMenu}>
                                     About me
@@ -127,7 +159,7 @@ function Navigation() {
                             </li>
                             <li>
                                 <a
-                                    className="block text-md p-3 hover:bg-zinc-900/80 hover:text-white rounded-sm transition-colors duration-300"
+                                    className={`block text-md p-3 ${linkHoverClasses} rounded-sm transition-colors duration-300`}
                                     href="#skills"
                                     onClick={closeMobileMenu}>
                                     Skills
@@ -135,7 +167,7 @@ function Navigation() {
                             </li>
                             <li>
                                 <a
-                                    className="block text-md p-3 hover:bg-zinc-900/80 hover:text-white rounded-sm transition-colors duration-300"
+                                    className={`block text-md p-3 ${linkHoverClasses} rounded-sm transition-colors duration-300`}
                                     href="#projects"
                                     onClick={closeMobileMenu}>
                                     Projects
@@ -143,7 +175,7 @@ function Navigation() {
                             </li>
                             <li>
                                 <a
-                                    className="block text-md p-3 hover:bg-zinc-900/80 hover:text-white rounded-sm transition-colors duration-300"
+                                    className={`block text-md p-3 ${linkHoverClasses} rounded-sm transition-colors duration-300`}
                                     href="#contact"
                                     onClick={closeMobileMenu}>
                                     Contact
