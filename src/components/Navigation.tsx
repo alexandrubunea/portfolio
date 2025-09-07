@@ -28,8 +28,8 @@ function Navigation() {
 
     // Dynamic classes based on scroll state
     const navClasses = isScrolled
-        ? "glass-card bg-zinc-900/95 backdrop-blur-sm border border-zinc-700/30 shadow-lg text-zinc-50"
-        : "glass-card bg-zinc-50/60 backdrop-blur-sm border border-zinc-200/20 shadow-lg text-zinc-900";
+        ? "glass-card bg-zinc-900/95 backdrop-blur-sm border border-zinc-700/30 shadow-lg text-zinc-50 top-0 rounded-lg rounded rounded-tl-none rounded-tr-none"
+        : "glass-card bg-zinc-50/60 backdrop-blur-sm border border-zinc-200/20 shadow-lg text-zinc-900 top-4 rounded-lg";
 
     const linkHoverClasses = isScrolled
         ? "hover:bg-zinc-50/20 hover:text-zinc-50"
@@ -45,7 +45,7 @@ function Navigation() {
 
     return (
         <div className="flex justify-center px-6 sm:px-20 xl:px-0 sticky top-0 z-50">
-            <nav className={`${navClasses} h-auto w-full px-5 max-w-7xl top-4 rounded-lg transition-all duration-300`}>
+            <nav className={`${navClasses} h-auto w-full px-5 max-w-7xl transition-all duration-300`}>
 
                 {/* Desktop Navigation */}
                 <div className="hidden md:flex justify-between items-center h-16">
