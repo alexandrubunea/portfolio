@@ -82,11 +82,6 @@ function Navigation() {
                             </a>
                         </li>
                         <li>
-                            <a className={`text-md p-3 ${linkHoverClasses} rounded-sm transition-colors duration-300`} href="#skills">
-                                Skills
-                            </a>
-                        </li>
-                        <li>
                             <a className={`text-md p-3 ${linkHoverClasses} rounded-sm transition-colors duration-300`} href="#projects">
                                 Projects
                             </a>
