@@ -37,7 +37,6 @@
 
 /* Glassmorphism */
 .glass-card {
-    background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border-radius: 20px;
