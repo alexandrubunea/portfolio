@@ -188,7 +188,7 @@ function Background() {
     }, [blobs]);
 
     return (
-        <div className="bg-slate-50 fixed inset-0 overflow-hidden pointer-events-none -z-10 blur-xs">
+        <div className="bg-slate-50 fixed inset-0 overflow-hidden pointer-events-none -z-50 blur-xs">
             {blobs.map((blob, index) => {
                 const lightColor = lightenColor(blob.color, 0.4);
                 const darkColor = darkenColor(blob.color, 0.3);
