@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import random from "random";
 import { animate, type JSAnimation } from "animejs";
 
-const NUMBER_OF_BLOBS = 7;
+const NUMBER_OF_BLOBS = 15;
 const BLOBS_COLORS = [
     "#BB41F0",
     "#F0417E",
