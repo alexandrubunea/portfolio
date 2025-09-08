@@ -10,7 +10,6 @@ A modern, responsive portfolio website showcasing my work as a full-stack develo
 - **GitHub Integration**: Automatically fetches and displays latest repositories
 - **Contact Form**: Functional contact form with Web3Forms integration
 - **SEO Optimized**: Proper meta tags and semantic HTML structure
-- **Smooth Scrolling**: Navigation with smooth scroll behavior
 - **Dark/Light Adaptive**: Navigation bar adapts based on scroll position
 
 ## 🚀 Tech Stack
@@ -162,7 +161,7 @@ const response = await fetch('https://api.github.com/users/your-username/repos?s
 ## 🚀 Deployment
 
 The project is optimized for deployment on:
-- **Vercel** (Recommended)
+- **Vercel**
 - **Netlify**
 - **GitHub Pages**
 - Any static hosting service
