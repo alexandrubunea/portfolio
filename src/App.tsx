@@ -15,10 +15,8 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div className="bg-gradient-to-br from-zinc-100 to-zinc-300">
       <div className="min-h-screen flex flex-col">
-        <Background />
-
         <Navigation />
 
         <main className="flex-1 max-w-7xl mx-auto">
@@ -43,7 +41,7 @@ function App() {
 
         <Footer />
       </div>
-    </>
+    </div>
   );
 }
 
