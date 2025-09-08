@@ -5,15 +5,8 @@ import AboutMe from './components/AboutMe';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import { preload } from 'react-dom';
-import { useEffect } from 'react';
 
 function App() {
-  useEffect(() => {
-    preload('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap', { as: 'style' });
-    preload('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,400&display=swap', { as: 'style' });
-  }, []);
-
   return (
     <div className="bg-gradient-to-br from-zinc-100 to-zinc-300">
       <div className="min-h-screen flex flex-col">
