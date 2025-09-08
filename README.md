@@ -1,10 +1,10 @@
 # Alexandru Bunea - Portfolio Website
 
-A modern, responsive portfolio website showcasing my work as a full-stack developer with expertise in web development and embedded systems. Built with React, TypeScript, and Tailwind CSS, featuring dynamic animations and a glassmorphism design aesthetic.
+A modern, responsive portfolio website showcasing my work as a full-stack developer with expertise in web development and embedded systems. Built with React, TypeScript, and Tailwind CSS, featuring dynamic animations and a minimalist design aesthetic.
 
 ## ✨ Features
 
-- **Modern Design**: Glassmorphism UI with smooth animations and gradient effects
+- **Modern Design**: Minimalist UI with smooth animations and gradient effects
 - **Responsive Layout**: Fully responsive design that works on all devices
 - **Dynamic Background**: Animated blob background with physics-based movement
 - **GitHub Integration**: Automatically fetches and displays latest repositories
@@ -15,9 +15,8 @@ A modern, responsive portfolio website showcasing my work as a full-stack develo
 ## 🚀 Tech Stack
 
 - **Frontend**: React 18, TypeScript
-- **Styling**: Tailwind CSS with custom glassmorphism effects
+- **Styling**: Tailwind CSS
 - **Icons**: Phosphor Icons
-- **Animations**: Anime.js for smooth blob animations
 - **Forms**: Web3Forms for contact form handling
 - **SEO**: React Helmet Async for meta tag management
 - **Build Tool**: Vite
@@ -71,11 +70,6 @@ src/
 ```
 
 ## 🎨 Design Features
-
-### Glassmorphism Effects
-- Backdrop blur effects with transparency
-- Subtle borders and shadows
-- Glass-like cards and components
 
 ### Dynamic Animations
 - Physics-based blob movement

@@ -1,4 +1,4 @@
-import { GithubLogoIcon, LinkedinLogoIcon, List, X } from "@phosphor-icons/react";
+import { GithubLogoIcon, LinkedinLogoIcon, ListIcon, XIcon } from "@phosphor-icons/react";
 import { useState, useEffect } from "react";
 
 function Navigation() {
@@ -32,16 +32,16 @@ function Navigation() {
         : "glass-card bg-zinc-50/60 backdrop-blur-sm border border-zinc-200/20 shadow-lg text-zinc-900 top-4 rounded-lg";
 
     const linkHoverClasses = isScrolled
-        ? "hover:bg-zinc-50/20 hover:text-zinc-50"
-        : "hover:bg-zinc-900/80 hover:text-white";
+        ? "hover:bg-zinc-50/20 hover:text-zinc-50 hover:text-zinc-50"
+        : "hover:bg-zinc-900/80 hover:text-white hover:text-zinc-50";
 
     const iconHoverClasses = isScrolled
         ? "hover:bg-zinc-50/20 hover:text-zinc-50"
         : "hover:bg-zinc-900/80 hover:text-white";
 
     const mobileMenuBorderClasses = isScrolled
-        ? "border-zinc-700/30"
-        : "border-zinc-200/30";
+        ? "border-zinc-700/30 hover:text-zinc-50"
+        : "border-zinc-200/30 hover:text-white";
 
     return (
         <div className="flex justify-center px-6 sm:px-20 xl:px-0 sticky top-0 z-50">
@@ -53,7 +53,7 @@ function Navigation() {
                         <li>
                             <a href="https://www.github.com/alexandrubunea/" target="_blank" aria-label="GitHub Profile">
                                 <GithubLogoIcon
-                                    className={`p-2 ${iconHoverClasses} rounded-sm transition-colors duration-300`}
+                                    className={`p-2 ${iconHoverClasses} rounded-sm`}
                                     weight="fill"
                                     size={40}
                                 />
@@ -62,7 +62,7 @@ function Navigation() {
                         <li>
                             <a href="https://www.linkedin.com/in/alexandruwbunea/" target="_blank" aria-label="LinkedIn Profile">
                                 <LinkedinLogoIcon
-                                    className={`p-2 ${iconHoverClasses} rounded-sm transition-colors duration-300`}
+                                    className={`p-2 ${iconHoverClasses} rounded-sm`}
                                     weight="fill"
                                     size={40}
                                 />
@@ -72,22 +72,22 @@ function Navigation() {
 
                     <ul className="flex flex-row gap-x-3 items-center poppins-light">
                         <li>
-                            <a className={`text-md p-3 ${linkHoverClasses} rounded-sm transition-colors duration-300`} href="#start">
+                            <a className={`text-md p-3 ${linkHoverClasses} rounded-sm`} href="#start">
                                 Start
                             </a>
                         </li>
                         <li>
-                            <a className={`text-md p-3 ${linkHoverClasses} rounded-sm transition-colors duration-300`} href="#aboutme">
+                            <a className={`text-md p-3 ${linkHoverClasses} rounded-sm`} href="#aboutme">
                                 About me
                             </a>
                         </li>
                         <li>
-                            <a className={`text-md p-3 ${linkHoverClasses} rounded-sm transition-colors duration-300`} href="#projects">
+                            <a className={`text-md p-3 ${linkHoverClasses} rounded-sm`} href="#projects">
                                 Projects
                             </a>
                         </li>
                         <li>
-                            <a className={`text-md p-3 ${linkHoverClasses} rounded-sm transition-colors duration-300`} href="#contact">
+                            <a className={`text-md p-3 ${linkHoverClasses} rounded-sm`} href="#contact">
                                 Contact
                             </a>
                         </li>
@@ -103,7 +103,7 @@ function Navigation() {
                             <li>
                                 <a href="https://www.github.com/alexandrubunea/" target="_blank" aria-label="GitHub Profile">
                                     <GithubLogoIcon
-                                        className={`p-2 ${iconHoverClasses} rounded-sm transition-colors duration-300`}
+                                        className={`p-2 ${iconHoverClasses} rounded-sm`}
                                         weight="fill"
                                         size={32}
                                     />
@@ -112,7 +112,7 @@ function Navigation() {
                             <li>
                                 <a href="https://www.linkedin.com/in/alexandruwbunea/" target="_blank" aria-label="LinkedIn Profile">
                                     <LinkedinLogoIcon
-                                        className={`p-2 ${iconHoverClasses} rounded-sm transition-colors duration-300`}
+                                        className={`p-2 ${iconHoverClasses} rounded-sm`}
                                         weight="fill"
                                         size={32}
                                     />
@@ -122,12 +122,12 @@ function Navigation() {
 
                         <button
                             onClick={toggleMobileMenu}
-                            className={`p-2 ${iconHoverClasses} rounded-sm transition-colors duration-300`}
+                            className={`p-2 ${iconHoverClasses} rounded-sm`}
                             aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}>
                             {isMobileMenuOpen ? (
-                                <X size={24} weight="bold" />
+                                <XIcon size={24} weight="bold" />
                             ) : (
-                                <List size={24} weight="bold" />
+                                <ListIcon size={24} weight="bold" />
                             )}
                         </button>
                     </div>
@@ -138,7 +138,7 @@ function Navigation() {
                         <ul className={`flex flex-col py-4 border-t ${mobileMenuBorderClasses} poppins-light`}>
                             <li>
                                 <a
-                                    className={`block text-md p-3 ${linkHoverClasses} rounded-sm transition-colors duration-300`}
+                                    className={`block text-md p-3 ${linkHoverClasses} rounded-sm`}
                                     href="#start"
                                     onClick={closeMobileMenu}>
                                     Start
@@ -146,7 +146,7 @@ function Navigation() {
                             </li>
                             <li>
                                 <a
-                                    className={`block text-md p-3 ${linkHoverClasses} rounded-sm transition-colors duration-300`}
+                                    className={`block text-md p-3 ${linkHoverClasses} rounded-sm`}
                                     href="#aboutme"
                                     onClick={closeMobileMenu}>
                                     About me
@@ -154,7 +154,7 @@ function Navigation() {
                             </li>
                             <li>
                                 <a
-                                    className={`block text-md p-3 ${linkHoverClasses} rounded-sm transition-colors duration-300`}
+                                    className={`block text-md p-3 ${linkHoverClasses} rounded-sm`}
                                     href="#projects"
                                     onClick={closeMobileMenu}>
                                     Projects
@@ -162,7 +162,7 @@ function Navigation() {
                             </li>
                             <li>
                                 <a
-                                    className={`block text-md p-3 ${linkHoverClasses} rounded-sm transition-colors duration-300`}
+                                    className={`block text-md p-3 ${linkHoverClasses} rounded-sm`}
                                     href="#contact"
                                     onClick={closeMobileMenu}>
                                     Contact

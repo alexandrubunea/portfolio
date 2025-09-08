@@ -69,7 +69,7 @@ function Projects() {
     if (loading) {
         return (
             <section className="flex justify-center px-6 sm:px-20 xl:px-0">
-                <div className="glass-card bg-zinc-50/80 w-full max-w-7xl min-h-[80vh] p-8 sm:p-12 lg:p-20 rounded-2xl">
+                <div className="bg-zinc-50/80 w-full max-w-7xl min-h-[80vh] p-8 sm:p-12 lg:p-20 rounded-2xl">
                     <div className="h-full flex items-center justify-center">
                         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-500"></div>
                     </div>
@@ -81,7 +81,7 @@ function Projects() {
     if (error) {
         return (
             <section id="projects" className="flex justify-center px-6 sm:px-20 xl:px-0">
-                <div className="glass-card bg-zinc-50/80 w-full max-w-7xl min-h-[80vh] p-8 sm:p-12 lg:p-20 rounded-2xl">
+                <div className="bg-zinc-50/80 w-full max-w-7xl min-h-[80vh] p-8 sm:p-12 lg:p-20 rounded-2xl">
                     <div className="h-full flex items-center justify-center">
                         <div className="text-center">
                             <p className="text-red-500 poppins-regular mb-4">{error}</p>
@@ -95,7 +95,7 @@ function Projects() {
 
     return (
         <section id="projects" className="flex justify-center px-6 sm:px-20 xl:px-0">
-            <div className="glass-card bg-zinc-50/80 w-full max-w-7xl min-h-[80vh] p-8 sm:p-12 lg:p-20 rounded-2xl">
+            <div className="bg-zinc-50/80 w-full max-w-7xl min-h-[80vh] p-8 sm:p-12 lg:p-20 rounded-2xl">
                 <div className="h-full space-y-8">
                     <div className="text-center space-y-4">
                         <h1 className="jetbrains-mono-bold text-2xl sm:text-3xl lg:text-4xl uppercase text-zinc-800 tracking-wider">

@@ -28,7 +28,7 @@ const TECHNICAL_SKILLS = [
 function AboutMe() {
     return (
         <section className="flex justify-center px-6 sm:px-20 xl:px-0">
-            <div className="glass-card outline-zinc-800 outline-1 bg-zinc-50/90 rounded-2xl w-full max-w-7xl min-h-[80vh] mx-auto shadow-2xl overflow-hidden">
+            <div className="outline-zinc-800 outline-1 bg-zinc-50/90 rounded-2xl w-full max-w-7xl min-h-[80vh] mx-auto shadow-2xl overflow-hidden">
                 <div className="flex justify-between items-center bg-gradient-to-r from-slate-100 to-slate-50 rounded-t-3xl h-14 border-b border-slate-200/70 px-4 sm:px-6">
                     <div className="flex items-center space-x-3">
                         <button
