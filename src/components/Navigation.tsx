@@ -155,14 +155,6 @@ function Navigation() {
                             <li>
                                 <a
                                     className={`block text-md p-3 ${linkHoverClasses} rounded-sm transition-colors duration-300`}
-                                    href="#skills"
-                                    onClick={closeMobileMenu}>
-                                    Skills
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    className={`block text-md p-3 ${linkHoverClasses} rounded-sm transition-colors duration-300`}
                                     href="#projects"
                                     onClick={closeMobileMenu}>
                                     Projects
