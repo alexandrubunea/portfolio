@@ -109,16 +109,6 @@ function Background() {
         };
 
         generateBlobs();
-
-        const handleResize = () => {
-            generateBlobs();
-        };
-
-        window.addEventListener('resize', handleResize);
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
     }, []);
 
     useEffect(() => {
